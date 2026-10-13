@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="TIKLIVE is a desktop application for TikTok sign-in and access to supported features through authorized integrations.">
+  <title>TIKLIVE — Desktop Application</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090b10;
+      --panel: #111620;
+      --text: #f4f7fb;
+      --muted: #a7b0c0;
+      --cyan: #25f4ee;
+      --pink: #fe2c55;
+      --border: #27303d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 5%, #123238 0, transparent 40%),
+        radial-gradient(ellipse at 90% 20%, #351524 0, transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: var(--cyan); }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #090b10e8;
+    }
+
+    .nav, main, footer {
+      width: min(1050px, 90%);
+      margin: auto;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .brand span { color: var(--pink); }
+
+    .nav a {
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 95px 0 70px;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 14px;
+      border: 1px solid #25f4ee55;
+      border-radius: 30px;
+      color: var(--cyan);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin: 24px 0 12px;
+      font-size: clamp(44px, 8vw, 76px);
+      line-height: 1.1;
+      letter-spacing: 3px;
+    }
+
+    h1 span {
+      color: var(--cyan);
+      text-shadow: 0 0 28px #25f4ee33;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .section { padding: 35px 0 65px; }
+
+    h2 { font-size: 27px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #151c28, #0d1119);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .card p, .muted { color: var(--muted); }
+
+    .notice {
+      border-left: 3px solid var(--pink);
+      padding: 14px 18px;
+      background: #fe2c550c;
+      color: var(--muted);
+    }
+
+    .policy {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      margin-top: 30px;
+      scroll-margin-top: 25px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0 35px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 560px) {
+      .nav { align-items: flex-start; padding: 18px 0; flex-direction: column; }
+      .nav a { margin: 0 14px 0 0; }
+      .hero { padding-top: 65px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">TIK<span>LIVE</span></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="tag">DESKTOP APPLICATION</div>
+      <h1>Welcome to <span>TIKLIVE</span></h1>
+      <p>
+        A desktop application designed to provide a simple interface
+        for TikTok sign-in and access to supported features through
+        authorized integrations.
+      </p>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About TIKLIVE</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Account Sign-In</h3>
+          <p>Designed to let users authenticate through TikTok's authorized sign-in flow.</p>
+        </article>
+        <article class="card">
+          <h3>Desktop Experience</h3>
+          <p>A desktop-focused interface intended to make supported features easier to access.</p>
+        </article>
+        <article class="card">
+          <h3>Authorized Access</h3>
+          <p>Features and account information are subject to TikTok's available APIs and granted permissions.</p>
+        </article>
+      </div>
+      <p class="notice">
+        TIKLIVE is an independent project and is not affiliated with,
+        endorsed by, or sponsored by TikTok. Available functionality
+        depends on official API access and approval.
+      </p>
+    </section>
+
+    <section class="section policy" id="privacy">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: October 13, 2026</p>
+      <p>
+        TIKLIVE is a desktop application project. Any collection or
+        processing of personal information must be limited to what is
+        necessary to provide its implemented features.
+      </p>
+      <p>
+        TikTok authentication, when implemented, is intended to use
+        TikTok's authorized sign-in process. Users should review the
+        permissions requested before granting access.
+      </p>
+      <p>
+        The project should not request or store a user's TikTok password.
+        Authentication tokens and other sensitive credentials must be
+        protected and must not be published in source code or public repositories.
+      </p>
+      <p>
+        Users may contact the project maintainer regarding privacy
+        questions or requests at the contact address published by the maintainer.
+      </p>
+      <p>
+        This policy must be updated to accurately describe actual data
+        collection, storage, sharing, retention, and deletion practices
+        before the application is released.
+      </p>
+    </section>
+
+    <section class="section policy" id="terms">
+      <h2>Terms of Service</h2>
+      <p class="muted">Last updated: October 13, 2026</p>
+      <p>
+        By using TIKLIVE, users agree to use the application lawfully
+        and in accordance with applicable TikTok terms, policies, and
+        permissions.
+      </p>
+      <p>
+        Access to TikTok features depends on API availability, account
+        eligibility, and any required platform approval. No feature is
+        guaranteed unless it has been implemented and authorized.
+      </p>
+      <p>
+        Users must not use the application to violate other people's
+        privacy, bypass access controls, or misuse account information.
+      </p>
+      <p>
+        The application is provided as a project in development.
+        Features may change as implementation and platform requirements evolve.
+      </p>
+      <p>
+        These terms must be reviewed and updated before public release
+        to reflect the final application's functionality and applicable law.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">TIK<span>LIVE</span></div>
+    <p>Independent desktop application project.</p>
+    <a href="#privacy">Privacy Policy</a> ·
+    <a href="#terms">Terms of Service</a>
+  </footer>
+</body>
+</html>
